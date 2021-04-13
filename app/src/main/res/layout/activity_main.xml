@@ -10,7 +10,7 @@
         android:id="@+id/edtNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="102dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="Nome"
         android:inputType="textPersonName"
@@ -22,7 +22,7 @@
         android:id="@+id/btnTchau"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="196dp"
         android:text="Dizer Tchau"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,5 +36,18 @@
         android:layout_marginBottom="32dp"
         android:text="Dizer oi"
         app:layout_constraintBottom_toTopOf="@+id/btnTchau"
-        app:layout_constraintStart_toStartOf="@+id/btnTchau" />
+        app:layout_constraintStart_toStartOf="@+id/btnTchau"
+        app:layout_constraintTop_toBottomOf="@+id/edtNome"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/btnCarro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTchau"
+        app:srcCompat="@drawable/ic_carro" />
 </androidx.constraintlayout.widget.ConstraintLayout>

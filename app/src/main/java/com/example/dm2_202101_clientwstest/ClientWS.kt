@@ -65,4 +65,21 @@ class ClientWS {
         return envelope.response.toString()
     }
 
+    @Throws(IOException::class, XmlPullParserException::class)
+    fun enviarCarro(c: Carro?): String? {
+
+        StrictMode.setThreadPolicy(StrictMode.ThreadPolicy.Builder().permitAll().build())
+
+        val soap = SoapObject("http://servicos/", "recebercarro")
+        soap.addProperty("carro", c)
+
+        val envelope = SoapSerializationEnvelope(SoapEnvelope.VER10)
+
+        envelope.setOutputSoapObject(soap)
+
+        HttpTransportSE("http://10.0.2.2:8080/dm2ws1/Saudacao?wsdl").call("recebercarro", envelope)
+
+        return envelope.response.toString()
+    }
+
 }
